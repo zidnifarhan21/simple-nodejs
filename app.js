@@ -12,8 +12,8 @@ app.get('/health', (req, res) => {
 })
 
 app.get("/url", (req, res, next) => {
-    res.json("Your Connected to our API!");
-   });
+    res.json("Your Connected to our API!")
+   })
 
 const fibonacci = n => {
     if (n <= 1) {
