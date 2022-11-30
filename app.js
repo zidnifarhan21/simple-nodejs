@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 const app = express()
-const port = 8080
+const port = 80
 
 app.use(bodyParser.json())
 
@@ -11,8 +11,9 @@ app.get('/health', (req, res) => {
     res.sendStatus(204)
 })
 
-app.get("/url", (req, res, next) => {
-    res.json("Your Connected to our API!")
+app.get("/", (req, res, next) => {
+    res.json("You're Connected to our API!")
+    res.sendStatus(204)
    })
 
 const fibonacci = n => {
